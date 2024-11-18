@@ -63,7 +63,7 @@ const LoginForm = () => {
       password,
     };
     axios
-      .post("http://localhost:3000/login", obj)
+      .post("https://flexipill-assignment.onrender.com/login", obj)
       .then((response) => {
         dispatch(loginTracker(true));
         localStorage.setItem("token", JSON.stringify(response.data.token));

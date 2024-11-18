@@ -48,7 +48,7 @@ const UpdateFormModal = ({ setTaskFormopen, currenttask }) => {
       return;
     }
     axios
-      .put(`http://localhost:3000/task/${id}/${token}`, newTask)
+      .put(`https://flexipill-assignment.onrender.com/task/${id}/${token}`, newTask)
       .then((response) => {
         toast.success("Task updated successfully!", {
           position: "top-center",
@@ -62,7 +62,7 @@ const UpdateFormModal = ({ setTaskFormopen, currenttask }) => {
         });
         setTaskFormopen(false);
         axios
-          .get(`http://localhost:3000/task/${token}`)
+          .get(`https://flexipill-assignment.onrender.com/task/${token}`)
           .then((response) => {
             dispatch(dataRefresher(response.data));
           })

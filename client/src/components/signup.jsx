@@ -78,7 +78,7 @@ const SignupForm = () => {
       password: password,
     };
     axios
-      .post("http://localhost:3000/register", obj)
+      .post("https://flexipill-assignment.onrender.com/register", obj)
       .then((res) => {
         toast.success("Signup successful 😀", {
           transition: Bounce,

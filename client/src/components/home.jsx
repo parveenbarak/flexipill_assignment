@@ -21,7 +21,7 @@ export const Home = () => {
   useEffect(() => {
     if (token) {
       axios
-        .get(`http://localhost:3000/task/${token}`)
+        .get(`https://flexipill-assignment.onrender.com/task/${token}`)
         .then((response) => {
           dispatch(dataRefresher(response.data));
         })
@@ -31,7 +31,7 @@ export const Home = () => {
 
   function handleDelete(id) {
     axios
-      .delete(`http://localhost:3000/task/${id}/${token}`)
+      .delete(`https://flexipill-assignment.onrender.com/task/${id}/${token}`)
       .then((response) => {
         toast.success("Task deleted successfully!", {
           position: "top-center",
@@ -44,7 +44,7 @@ export const Home = () => {
           transition: Bounce,
         });
         axios
-          .get(`http://localhost:3000/task/${token}`)
+          .get(`https://flexipill-assignment.onrender.com/task/${token}`)
           .then((response) => {
             dispatch(dataRefresher(response.data));
           })

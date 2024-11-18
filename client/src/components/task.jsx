@@ -45,7 +45,7 @@ const TaskFormModal = ({ setIsOpen }) => {
       return;
     }
     axios
-      .post(`http://localhost:3000/task/${token}`, newTask)
+      .post(`https://flexipill-assignment.onrender.com/task/${token}`, newTask)
       .then((response) => {
         toast.success("Task created successfully!", {
           position: "top-center",
@@ -59,7 +59,7 @@ const TaskFormModal = ({ setIsOpen }) => {
         });
         setIsOpen(false);
         axios
-          .get(`http://localhost:3000/task/${token}`)
+          .get(`https://flexipill-assignment.onrender.com/task/${token}`)
           .then((response) => {
             dispatch(dataRefresher(response.data));
           })
