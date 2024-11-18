@@ -59,9 +59,12 @@ _libraries:_ Argon2, CORS, JSON Web Token<br/>
 
 - Full Stack (Frontend and Backend)
 
-# Deployed Link
+# Frontend Deployed Link
 
 - https://flexipill-assignment.vercel.app/
+
+  #Backend Deployed Link
+  - https://flexipill-assignment.onrender.com
 
 # Features
 
